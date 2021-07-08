@@ -1,0 +1,60 @@
+@use '../custom' as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  * {
+    color: $white !important;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .navbar-toggler {
+    .navbar-light .navbar-toggler-icon {
+      color: $white !important;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar-nav:first-child {
+    margin-left: 146px;
+  }
+
+  .navbar-nav:last-child {
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar-nav:first-child {
+      margin-left: 0;
+    }
+  }
+
+  li {
+    font-family: Open Sans;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    margin-right: 20px;
+    border-bottom: 0px solid $white;
+    transition: all 0.1s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+
+    @include media-breakpoint-down(lg) {
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}
