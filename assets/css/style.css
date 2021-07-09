@@ -10795,9 +10795,6 @@ body {
     text-align: center;
   }
 }
-.games .main-games .games-left {
-  width: 30%;
-}
 .games .main-games .games-left h3 {
   font-family: Arial;
   font-size: 24px;
@@ -10812,7 +10809,6 @@ body {
 }
 .games .main-games .games-right {
   margin-top: 42px;
-  width: 70%;
 }
 .games .main-games .games-right .button-left,
 .games .main-games .games-right .button-right {
