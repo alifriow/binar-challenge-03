@@ -11261,6 +11261,7 @@ footer * .footer-info ul li:first-child::before {
   color: #fff;
   min-height: 100vh;
   padding-top: 30px;
+  background: url(../../assets/images/top-score-bg.png);
   background-color: black;
   background-size: cover;
   background-position: center;
@@ -11367,6 +11368,7 @@ footer * .footer-info ul li:first-child::before {
 }
 .top-scores .cards .card .card-body {
   margin-top: 0px;
+  padding-left: 0;
   padding-bottom: 0px !important;
 }
 .top-scores .cards .card .card-body h3 {
