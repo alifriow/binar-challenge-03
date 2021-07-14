@@ -1,0 +1,161 @@
+@use '../custom' as *;
+
+footer {
+  background: black;
+
+  & * {
+    color: $white;
+
+    li {
+      list-style: none;
+      margin-left: 50px;
+
+      a {
+        text-decoration: none;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    .footer-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .footer-menu__nav {
+        display: flex;
+        align-items: center;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      .footer-menu__sosmed {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .footer-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #ffffff;
+        opacity: 0.5;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          position: relative;
+          margin-left: 20px;
+          &::before {
+            content: "|";
+            position: absolute;
+            left: -15px;
+          }
+
+          &:first-child::before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .footer-info {
+    padding: 0;
+    ul {
+      padding: 0;
+      li {
+        &::before {
+          content: "" !important;
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  li {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-menu {
+    gap: 10px;
+    padding: 0px !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    .footer-menu__nav {
+      padding: 0 !important;
+      margin: 0 !important;
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+
+      li {
+        margin-bottom: 5px !important;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .footer-menu__sosmed {
+      padding: 0 !important;
+      margin: 0 !important;
+
+      li {
+        margin-right: 20px !important;
+      }
+    }
+  }
+
+  .footer-info {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start !important;
+    }
+  }
+
+  hr {
+    margin-top: 15px !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  footer {
+    padding: 0 15px !important;
+  }
+}

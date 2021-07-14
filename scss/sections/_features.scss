@@ -1,0 +1,106 @@
+@use '../custom' as *;
+
+.features {
+  @include media-breakpoint-down(lg) {
+    padding-top: 150px;
+  }
+
+  color: $white;
+  min-height: 100vh;
+  padding-top: 130px;
+  background: url(../../assets/images/features.jpg),
+    radial-gradient(
+      136.03% 54.57% at 50% 48.04%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 60.63%,
+      #080a0b 99.74%
+    );
+  background-size: cover;
+  background-position: center;
+
+  .main-features {
+    padding-left: 50px;
+
+    @include media-breakpoint-down(md) {
+      & {
+        padding-left: 200px;
+      }
+    }
+
+    .features_heading {
+      margin-bottom: 50px;
+
+      h1 {
+        font-family: Arial;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-family: Arial;
+        font-size: 56px;
+        font-weight: 400;
+
+        @include media-breakpoint-down(md) {
+          & {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    ul.features_menu {
+      position: relative;
+      padding: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 4px;
+        bottom: 0;
+        left: 0;
+      }
+
+      .detail {
+        position: relative;
+        list-style: none;
+
+        //bullet
+        &::after {
+          content: "";
+          position: absolute;
+          top: 3px;
+          left: -3.5px;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: $white;
+          border: 1px solid $white;
+          z-index: 1;
+        }
+
+        .info {
+          padding-left: 40px;
+          padding-bottom: 30px;
+          position: relative;
+          border-radius: 6px;
+
+          h3 {
+            font-family: Arial;
+            font-size: 24px !important;
+            line-height: 28px;
+            font-weight: normal;
+            color: #ffb548;
+          }
+
+          p {
+            font-family: Open Sans;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

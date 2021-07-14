@@ -1,0 +1,122 @@
+@use '../custom' as *;
+
+.games {
+  @include media-breakpoint-down(lg) {
+    padding-top: 150px;
+  }
+
+  color: $white;
+  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 40px;
+  background: url(../../assets/images/the-games-bg.jpg),
+    radial-gradient(
+      136.03% 54.57% at 50% 48.04%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 60.63%,
+      #080a0b 99.74%
+    );
+  background-size: cover;
+  background-position: center;
+
+  .main-games {
+    @include media-breakpoint-down(lg) {
+      & {
+        flex-direction: column;
+
+        .games-left {
+          margin-bottom: 30px;
+        }
+
+        .games-left,
+        .games-right {
+          width: 100% !important;
+          text-align: center;
+        }
+      }
+    }
+
+    .games-left {
+      h3 {
+        font-family: Arial;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-family: Arial;
+        font-size: 56px;
+        font-weight: 400;
+      }
+    }
+
+    .games-right {
+      padding: 0;
+      margin-top: 42px;
+
+      //carousel
+      .carousel-indicators {
+        button {
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+        }
+      }
+
+      .carousel-control-prev {
+        left: -80px;
+      }
+
+      .carousel-control-next {
+        right: -80px;
+      }
+
+      .gallery {
+        .button-left,
+        .button-right {
+          margin: 0px 5px;
+        }
+
+        .slider_wrapper {
+          width: 858px;
+          height: 477px;
+          border-radius: 10px !important;
+          position: relative;
+          overflow: hidden;
+
+          .slider {
+            width: 3432px;
+            height: 477px;
+            position: relative;
+            border-radius: 10px !important;
+
+            .slide {
+              width: 858px;
+              height: 477px;
+              border-radius: 10px !important;
+              position: relative;
+              float: left;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                border-radius: 10px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 800px) {
+  .carousel-control-prev {
+    left: 0 !important;
+  }
+
+  .carousel-control-next {
+    right: 0 !important;
+  }
+}
