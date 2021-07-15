@@ -5,9 +5,10 @@
   min-height: 100vh;
   padding-top: 30px;
   background: url(../../assets/images/top-score-bg.png);
-  background-color: black;
+  // background-color: black;
   background-size: cover;
   background-position: center;
+  width: 100vw;
 
   .top-scores-info {
     h1 {
