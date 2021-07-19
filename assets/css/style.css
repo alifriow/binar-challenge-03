@@ -10806,6 +10806,18 @@ footer * .footer-menu .footer-menu__sosmed {
   display: flex;
   align-items: center;
 }
+footer * .footer-menu .footer-menu__sosmed .fab.fa-youtube:hover {
+  color: red;
+}
+footer * .footer-menu .footer-menu__sosmed .fab.fa-twitter:hover {
+  color: #1da1f2;
+}
+footer * .footer-menu .footer-menu__sosmed .fab.fa-facebook-f:hover {
+  color: #4267b2;
+}
+footer * .footer-menu .footer-menu__sosmed .fab.fa-twitch:hover {
+  color: #6441a5;
+}
 footer * .footer-info {
   display: flex;
   align-items: center;
@@ -10871,7 +10883,7 @@ footer * .footer-info ul li:first-child::before {
     justify-content: flex-start !important;
   }
   .footer-menu .footer-menu__nav li {
-    margin-bottom: 5px !important;
+    margin-bottom: 20px !important;
   }
   .footer-menu .footer-menu__nav li a {
     font-size: 16px;
@@ -10896,6 +10908,9 @@ footer * .footer-info ul li:first-child::before {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start !important;
+  }
+  .footer-info ul li {
+    margin-bottom: 10px !important;
   }
 
   hr {
@@ -11096,6 +11111,7 @@ footer * .footer-info ul li:first-child::before {
 }
 
 .section-intro .main-intro {
+  padding-top: 200px;
   min-height: 80vh;
   text-align: center;
 }
@@ -11103,8 +11119,9 @@ footer * .footer-info ul li:first-child::before {
   color: #fff;
   font-weight: bold;
   line-height: 83px;
-  letter-spacing: 3px;
+  letter-spacing: 10px;
   margin-bottom: 30px;
+  font-size: 100px;
 }
 .section-intro .main-intro h3 {
   color: #fff;
@@ -11151,16 +11168,24 @@ footer * .footer-info ul li:first-child::before {
     bottom: 7.5%;
   }
   100% {
-    margin-top: 5%;
+    bottom: 5%;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 992px) {
+  .main-intro h1 {
+    font-size: 70px !important;
+  }
+}
+@media (max-width: 767px) {
   .btn-last {
-    bottom: 2% !important;
+    display: none;
   }
 }
 .navbar {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -11266,6 +11291,7 @@ footer * .footer-info ul li:first-child::before {
   color: #fff;
   min-height: 100vh;
   padding-top: 30px;
+  padding-bottom: 30px;
   background: url(../../assets/images/top-score-bg.png);
   background-size: cover;
   background-position: center;
@@ -11397,6 +11423,7 @@ footer * .footer-info ul li:first-child::before {
 @media (max-width: 991.98px) {
   .cards {
     margin-top: 30px;
+    padding-right: 30px;
     align-items: flex-start !important;
   }
   .cards .card:nth-child(2) {
@@ -11405,7 +11432,7 @@ footer * .footer-info ul li:first-child::before {
 }
 .newsletter {
   min-height: 90vh;
-  padding-top: 100px;
+  padding-top: 50px;
   background: #080a0b;
 }
 .newsletter .newsletter-text {
@@ -11477,6 +11504,27 @@ footer * .footer-info ul li:first-child::before {
   font-size: 16px;
   line-height: 22px;
   color: #1a1917;
+}
+
+@media (max-width: 991.98px) {
+  .newsletter {
+    padding-bottom: 0;
+  }
+
+  .newsletter-text h1 {
+    font-size: 50px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .col-md-5 img {
+    display: none;
+  }
+
+  .newsletter-text h1 {
+    margin: 20px 0;
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

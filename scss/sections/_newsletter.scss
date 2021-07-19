@@ -1,6 +1,8 @@
+@use '../custom' as *;
+
 .newsletter {
   min-height: 90vh;
-  padding-top: 100px;
+  padding-top: 50px;
   background: #080a0b;
 
   .newsletter-text {
@@ -80,6 +82,34 @@
         line-height: 22px;
         color: #1a1917;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .newsletter {
+    padding-bottom: 0;
+  }
+
+  .newsletter-text {
+    h1 {
+      font-size: 50px !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .col-md-5 {
+    img {
+      display: none;
+    }
+  }
+
+  .newsletter-text {
+    h1 {
+      margin: 20px 0;
+      font-size: 40px !important;
+      line-height: 40px !important;
     }
   }
 }

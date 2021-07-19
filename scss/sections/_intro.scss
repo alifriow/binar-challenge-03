@@ -15,6 +15,7 @@
 
 .section-intro {
   .main-intro {
+    padding-top: 200px;
     min-height: 80vh;
     text-align: center;
 
@@ -22,8 +23,9 @@
       color: $white;
       font-weight: bold;
       line-height: 83px;
-      letter-spacing: 3px;
+      letter-spacing: 10px;
       margin-bottom: 30px;
+      font-size: 100px;
     }
 
     h3 {
@@ -79,15 +81,23 @@
           bottom: 7.5%;
         }
         100% {
-          margin-top: 5%;
+          bottom: 5%;
         }
       }
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 992px) {
+  .main-intro {
+    h1 {
+      font-size: 70px !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
   .btn-last {
-    bottom: 2% !important;
+    display: none;
   }
 }

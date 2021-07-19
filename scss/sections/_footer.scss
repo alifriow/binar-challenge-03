@@ -39,6 +39,22 @@ footer {
       .footer-menu__sosmed {
         display: flex;
         align-items: center;
+
+        .fab.fa-youtube:hover {
+          color: red;
+        }
+
+        .fab.fa-twitter:hover {
+          color: #1da1f2;
+        }
+
+        .fab.fa-facebook-f:hover {
+          color: #4267b2;
+        }
+
+        .fab.fa-twitch:hover {
+          color: #6441a5;
+        }
       }
     }
 
@@ -116,7 +132,7 @@ footer {
       justify-content: flex-start !important;
 
       li {
-        margin-bottom: 5px !important;
+        margin-bottom: 20px !important;
 
         a {
           font-size: 16px;
@@ -146,6 +162,10 @@ footer {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start !important;
+
+      li {
+        margin-bottom: 10px !important;
+      }
     }
   }
 
